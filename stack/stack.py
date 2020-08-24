@@ -20,8 +20,10 @@ class Stack:
         # checking to see if the stack is empty
         if len(self.storage) == 0:
             print("stack is empty!")
+            return self.size
         else:
             print(len(self.storage))
+            return len(self.storage)
 
     def push(self, value):
         if value is None:
@@ -29,12 +31,12 @@ class Stack:
         else:
             self.storage.append(value)
             self.size + 1
-            return self.storage
+            return len(self.storage)
 
     def pop(self):
         # checking to see if the stack is empty
         if len(self.storage) == 0:
             print("stack is empty!")
         else:
-            self.storage.pop()
-            return self.storage
+            return self.storage.pop()
+
